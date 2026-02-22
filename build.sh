@@ -13,7 +13,7 @@ mkdir -p build
 cp public/index.html build/
 
 # (Optional) copy JS if needed later
-cp -r src build/
+#cp -r src build/
 
 echo "===================================="
 echo " Build completed successfully"
