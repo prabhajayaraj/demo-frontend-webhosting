@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/prabhajayaraj/demo-frontend-webhosting.git',
-                    credentialsId: 'frontend'
+                    credentialsId: 'aws-credentials'
             }
         }
 
