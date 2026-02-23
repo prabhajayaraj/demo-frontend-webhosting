@@ -15,6 +15,7 @@ pipeline {
             }
         }
 
+        /*
         stage('Build React') {
             steps {
                 sh 'chmod +x build.sh'
@@ -29,6 +30,6 @@ pipeline {
                     sh 'aws cloudfront create-invalidation --distribution-id E38MNKXRCVLOIR --paths "/*"'
                 }
             }
-        }
+        } */
     }
 }
