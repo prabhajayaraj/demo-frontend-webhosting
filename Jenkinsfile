@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        S3_BUCKET = 'demo-surya-01'
+        S3_BUCKET = 'demo-surya-01 '
     }
 
     stages {
@@ -15,7 +15,6 @@ pipeline {
             }
         }
 
-        /*
         stage('Build React') {
             steps {
                 sh 'chmod +x build.sh'
@@ -30,6 +29,6 @@ pipeline {
                     sh 'aws cloudfront create-invalidation --distribution-id E38MNKXRCVLOIR --paths "/*"'
                 }
             }
-        } */
+        }
     }
 }
