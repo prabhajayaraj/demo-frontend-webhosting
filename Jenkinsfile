@@ -14,7 +14,15 @@ pipeline {
                     credentialsId: 'aws-credentials'
             }
         }
-
+// New Terraform stage
+        stage('Terraform Init & Apply') {
+            steps {
+                withAWS(credentials: 'aws-credentials', region: 'us-east-1') {
+                        sh 'terraform init'
+                        sh 'terraform apply -auto-approve'
+                }
+            }
+        }
         stage('Build React') {
             steps {
                 sh 'chmod +x build.sh'
